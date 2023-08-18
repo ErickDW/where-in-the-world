@@ -1,0 +1,16 @@
+.containert-card-description {
+  text-align: initial;
+  padding: 25px;
+}
+
+.containert-card-description > div > article {
+  margin-top: 20px;
+}
+
+article > p {
+  font-weight: 600;
+}
+
+article > p > span {
+  font-weight: 300;
+}

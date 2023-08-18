@@ -2,26 +2,102 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: Nunito Sans;
+  src: url('../assets/fonts/Nunito-Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf') format(truetype);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+* {
+  font-family: Nunito Sans;
+}
+
+h1{
+  font-size: 2em;
+  font-weight: 800;
+}
+
+h2{
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+h3{
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+.shadow{
+  box-shadow: hsla(0, 0%, 0%, 0.2) 0px 0px 5px 2px;
+}
+
+.font-weight-bold{
+  font-weight: 800;
+}
+
+.font-weight-bold-600{
+  font-weight: 600;
+}
+
+.font-weight-bold-300{
+  font-weight: 300;
+}
+
+.gap-18{
+  gap: 4.5rem;
+}
+
+main{
+  padding: 30px 50px; 
+}
+
+/* Responsyve dising  */
+
+/* Screen 850px*/
+@media (max-width: 850px) {
+  h1{
+    font-size: 1.5em;
+  }
+  
+  h2{
+    font-size: 1.2em;
+  }
+
+  h3{
+    font-size: 1em;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Screen 650px*/
+@media (max-width: 650px) {
+  h1{
+    font-size: 1.2em;
+  }
+  
+  h2{
+    font-size: 1em;
+  }
+
+  h3{
+    font-size: 0.90em;
+  }
+
+  main{
+    padding: 30px 16px; 
+  }
+}
+
+/* Screen 450px*/
+@media (max-width: 450px) {
+  h1{
+    font-size: 1em;
+  }
+  
+  h2{
+    font-size: 0.90em;
+  }
+
+  h3{
+    font-size: 0.80em;
+  }
+
 }
