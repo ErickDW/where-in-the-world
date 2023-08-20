@@ -1,0 +1,8 @@
+@media (max-width: 1420px) {
+  .custom-font {
+    width: 100%;
+  }
+  .max-w-custom{
+    justify-content: center;
+  }
+}

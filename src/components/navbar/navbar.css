@@ -1,0 +1,38 @@
+header{
+  background: hsl(var(--colors-primary));
+  padding: 14px 50px;
+}
+
+/* Responsyve dising  */
+
+/* Screen 850px*/
+@media (max-width: 850px) {
+  header {
+    padding: 14px 40px;
+  }
+
+  h1.title{
+    font-size: 1.5em;
+  }
+}
+
+/* Screen 650px*/
+@media (max-width: 650px) {
+  header {
+    padding: 14px 25px;
+  }
+
+  h1.title{
+    font-size: 1.2em;
+  }
+}
+
+/* Screen 450px*/
+@media (max-width: 450px) {
+  header {
+    padding: 14px 14px;
+  }
+  h1.title{
+    font-size: 1em;
+  }
+}

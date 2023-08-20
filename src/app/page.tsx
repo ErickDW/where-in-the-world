@@ -1,16 +1,20 @@
-'use client'
-// 1. import `NextUIProvider` component
-import { NextUIProvider } from "@nextui-org/react";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
-import Home from "./layout/home/page";
 
-export default function App() {
-  // 2. Wrap NextUIProvider at the root of your app
+import { flagsInterface } from "@/utils/interfaces";
+import { Home } from "./home/page";
+import { getRandomSubset, getSubset } from "@/utils/utils";
+
+async function loadFlags() {
+  const res = await fetch(`http://localhost:3000/api/flags`);
+  const data: flagsInterface[] = await res.json();
+  return data;
+}
+
+async function App() {
+  const allFlags: flagsInterface[] = await loadFlags();
+
   return (
-    <NextUIProvider>
-      <NextThemesProvider attribute="class">
-        <Home />
-      </NextThemesProvider>
-    </NextUIProvider>
+    <Home data={allFlags} />
   );
 }
+
+export default App;

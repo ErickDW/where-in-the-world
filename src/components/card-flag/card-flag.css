@@ -1,0 +1,8 @@
+.container-card-description {
+  text-align: initial;
+  padding: 25px;
+}
+
+.container-card-description > div > article {
+  margin-top: 20px;
+}
